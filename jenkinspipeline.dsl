@@ -5,12 +5,14 @@ node {
       git 'https://github.com/djjerguthrie/testjenkins.git'
    }
    stage('Build') {
+      def pw = input message '<message>', parameters: [password(defaultValue: '', description: 'Enter a sample password.', name: 'passwwd')]
       // Run the maven build
       //if (isUnix()) {
         // sh newfile.sh
       //} 
       sh 'pwd'
       sh './newfile.sh'
+      sh 'logger ${passwd}'
    }
    stage('Input') {
       input 'Continue for the next stage?'
