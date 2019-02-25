@@ -10,7 +10,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/djjerguthrie/testjenkins.git'
-                sh 'echo Active user is now ${params.USERID}'
+                echo Active user is now ${params.USERID}
             }
         }
         stage( 'Build' ) {
