@@ -25,7 +25,9 @@ pipeline {
         }
         stage( 'Input' ) {
             steps {
-                input 'Continue for the next stage?'
+                timeout(time:60, unit: 'SECONDS') {
+                    input 'Continue for the next stage?'
+                }
             }
         }
         stage( 'Go' ) {
