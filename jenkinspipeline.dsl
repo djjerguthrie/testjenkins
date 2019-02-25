@@ -1,4 +1,5 @@
 properties( [
+    disableConcurrentBuidls()
     parameters( [
         string( defaultValue: '', description: '', name: 'USERID' )
     ] )
