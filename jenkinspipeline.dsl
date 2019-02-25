@@ -1,6 +1,5 @@
 properties( [
     parameters( [
-        disableConcurrentBuilds(),
         string( defaultValue: '', description: '', name: 'USERID' )
     ] )
 ] )
