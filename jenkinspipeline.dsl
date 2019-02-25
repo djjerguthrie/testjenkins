@@ -1,3 +1,4 @@
+properties([pipelineTriggers([githubPush()])])
 node {
 
    stage('Preparation') { // for display purposes
