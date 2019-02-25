@@ -1,6 +1,6 @@
 properties( [
     parameters( [
-        disableConcurrentBuidls(),
+        disableConcurrentBuilds(),
         string( defaultValue: '', description: '', name: 'USERID' )
     ] )
 ] )
@@ -38,4 +38,3 @@ pipeline {
         }
     }
 }
-
