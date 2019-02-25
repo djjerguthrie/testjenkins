@@ -8,7 +8,7 @@ pipeline {
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
       git 'https://github.com/djjerguthrie/testjenkins.git'
-      sh 'echo Active user is now ${params.USERID}"
+      sh 'echo Active user is now ${params.USERID}'
    }
    stage('Build') {
       //def pw = input message '<message>', 
