@@ -1,4 +1,3 @@
-#properties([pipelineTriggers([githubPush()])])
 node {
 
    stage('Preparation') { // for display purposes
@@ -12,5 +11,11 @@ node {
       //} 
       sh 'pwd'
       sh './newfile.sh'
+   }
+   stage('Input') {
+      input 'Continue for the next stage?'
+   }
+   stage('Go') {
+      sh 'logger went'
    }
 }
